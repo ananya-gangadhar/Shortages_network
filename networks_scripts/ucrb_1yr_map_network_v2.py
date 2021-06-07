@@ -155,7 +155,7 @@ def plot_network_graph(G, year):
 
 
     plt.tight_layout(pad=5)
-    plt.savefig( 'yearly_networks_plots_v2/cleaned_up_figs/' + year + '_100percent' + '.png', dpi=300)
+    plt.savefig( 'yearly_networks_plots_v2/cleaned_up_figs/' + year + '_100percent' + '.svg', dpi=300)
 
 
 

@@ -66,8 +66,9 @@ ax.add_feature(shape_feature, facecolor='#a1a384', alpha = 0.6)
 # Draw streams
 ax.add_feature(flow_feature, alpha = 0.8, linewidth=1.5, zorder=4)
 # Draw grid
-ax.pcolor(X, Y, Z, facecolor='none', edgecolor='grey', alpha=0.5, linewidth=0.5, transform=ccrs.PlateCarree())
+#ax.pcolor(X, Y, Z, facecolor='none', edgecolor='grey', alpha=0.5, linewidth=0.5, transform=ccrs.PlateCarree())
 # Draw StateMod nodes
+print(gauges.columns)
 stru = ax.scatter(structures['X'], structures['Y'], marker = '.', s = 200,
            c =statemod_clr, transform=ccrs.PlateCarree(),zorder=5)
 gaug = ax.scatter(gauges['longitude'], gauges['latitude'], marker = '.', s = 200, c = gauge_clr,
@@ -75,4 +76,4 @@ gaug = ax.scatter(gauges['longitude'], gauges['latitude'], marker = '.', s = 200
 clim = ax.scatter(climate['longitude'], climate['latitude'], marker = '.', s = 200, c = climate_clr,
                   transform=ccrs.PlateCarree(),zorder=5)
 ax.legend((stru, gaug, clim),('Diversion Structures', 'All Div 5 Streamflow Gauges', 'All Div 5 Climate Stations'))
-plt.savefig('basin_stations_relevant.png')
+plt.savefig('basin_stations_relevant.svg')
